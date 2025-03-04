@@ -13,10 +13,11 @@ class Solution {
     public boolean isValid(String s) {
         Stack<Character> open = new Stack<>();
         Map<Character, Character> matching = Map.of(
-            '}', '{',
+            '}', '{',   
             ']', '[',
             ')', '('
         );
+
         for(char c : s.toCharArray()) {
             Character match = matching.get(c);
             if(match != null) {
